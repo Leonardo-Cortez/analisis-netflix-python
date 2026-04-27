@@ -39,3 +39,51 @@ Se evaluaron los modelos de K-Nearest Neighbors, Regresión Logística y Árbol 
 | KNN | 0.985696 | 0.976190 | 0.976190 | 0.976190 |
 | Regresión Logística | 0.996749| 0.991398 | 0.997835 | 0.994606 |
 | Árbol de decisión | 0.997399 | 0.995671 | 0.995671 | 0.995671 |
+
+La matriz de confusión de cada modelo puede ser consultada en "netflix_project/assets". A continuación se presenta la interpretación de los resultados, donde:
+* TN = Verdaderos negativos
+* FP = Falsos positivos
+* FN = Falsos negativos
+* TP = Verdaderos positivos
+
+<table>
+  <tr>
+    <th colspan="4">Tabla 1. Resultados matriz de confusión para KNN </th>
+  </tr>
+  <tr>
+    <td>TN: 1065</td>
+    <td>FP: 11</td>
+    <td>FN: 11</td>
+    <td>TP: 451</td>
+  </tr>
+</table>
+
+La Tabla 1 indica que el modelo KNN es relativamente el menos preciso en cuanto a desempeño, ya que cometió 22 errores totales. Porque clasificó 11 series de televisión como películas y 11 películas como series de televisión.
+
+<table>
+  <tr>
+    <th colspan="4">Tabla 2. Resultados matriz de confusión para Árbol de decisión </th>
+  </tr>
+  <tr>
+    <td>TN: 1074</td>
+    <td>FP: 2</td>
+    <td>FN: 2</td>
+    <td>TP: 460</td>
+  </tr>
+</table>
+
+La Tabla 2 indica que el Árbol de decisión tiene mucho mejor desempeño que KNN, ya que se sólo cometió 4 errores. Porque clasificó 2 series de televisión como películas y 2 películas como series de televisión. Por lo que es el modelo más equilibrado y confiable, ideal para entender qué reglas de negocio definen cada tipo de contenido.
+
+<table>
+  <tr>
+    <th colspan="4">Tabla 3. Resultados matriz de confusión para Regresión Logística </th>
+  </tr>
+  <tr>
+    <td>TN: 1072</td>
+    <td>FP: 4</td>
+    <td>FN: 1</td>
+    <td>TP: 461</td>
+  </tr>
+</table>
+
+Y finalmente la Tabla 3, indica que la Regresión Logística tiene alta precisión en en clasificar series, ya que clasificó 1 serie como película y 4 películas como series. Si se compara este modelo con los 2 anteriores, estaría en un punto intermedio al tener 5 errores totales. Al tener un falso negativo se puede decir que todas las series de televisión que había en los datos, el modelo no pudo acertar en una.
